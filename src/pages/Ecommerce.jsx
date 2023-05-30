@@ -1,16 +1,13 @@
 import React from "react";
-import { Button, SparkLine } from "../components";
+import { Button, SparkLine, Stacked } from "../components";
 import { SparklineAreaData, earningData } from "../data/dummy";
 import { GoPrimitiveDot } from "react-icons/go";
 const Ecommerce = () => {
   return (
-    <div className="mt-12">
+    <div className="mt-24">
       <div className="flex flex-wrap lg:flex-nowrap justify-center">
         <div
-          className="bg-white dark:text-gray-200
-        dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80
-        p-8 pt-9 m-3 bg-hero-pattern 
-        bg-no-repeat bg-cover bg-center"
+          className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center"
         >
           <div className="flex justify-between items-center">
             <div>
@@ -35,13 +32,13 @@ const Ecommerce = () => {
           {earningData.map((item) => (
             <div
               key={item.title}
-              className="bg-white dark:bg-secondary-dark-bg
+              className="bg-white h-44 dark:text-gray-200 dark:bg-secondary-dark-bg
              md:w-56 p-4 pt-9 rounded-2xl"
             >
               <button
                 type="button"
-                style={{ color: item.color, backgroundColor: item.iconBg }}
-                className="text-2xl opacity-0.9 hover:drop-shadow-xl"
+                style={{ color: item.iconColor, backgroundColor: item.iconBg }}
+                className="text-2xl opacity-0.9 p-4 hover:drop-shadow-xl"
               >
                 {item.icon}
               </button>
@@ -62,7 +59,7 @@ const Ecommerce = () => {
       >
         <div
           className="bg-white dark:text-gray-200 
-        dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-788"
+        dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780"
         >
           <div className="flex justify-between">
             <p className="font-semibold text-xl">Revenue Updates</p>
@@ -103,13 +100,13 @@ const Ecommerce = () => {
                     33%
                   </span>
                 </p>
-                <p className="text-gray-400 mt-1">Budget</p>
+                <p className="text-gray-500 mt-1">Budget</p>
               </div>
               <div className="mt-8">
                 <p>
                   <span className="text-3xl font-semibold">$85,432</span>
                 </p>
-                <p className="text-gray-400 mt-1">Expence</p>
+                <p className="text-gray-500 mt-1">Expence</p>
               </div>
 
               <div className="mt-5">
@@ -131,6 +128,9 @@ const Ecommerce = () => {
                   borderRadius="10px"
                 />
               </div>
+            </div>
+            <div>
+              <Stacked height="360px" width="320px" />
             </div>
           </div>
         </div>

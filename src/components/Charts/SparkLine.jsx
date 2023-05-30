@@ -22,8 +22,8 @@ const SparkLine = ({ id, height, width, color, data, type, currentColor }) => {
         visible:true,
         format:'${x} : data ${yval}',
         trackLineSettings:{
-          visible:true
-        }
+          visible:true,
+        },
       }}
     >
       <Inject services={[SparklineTooltip]} />
