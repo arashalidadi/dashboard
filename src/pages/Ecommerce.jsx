@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, SparkLine } from "../components";
 import { SparklineAreaData, earningData } from "../data/dummy";
-import {GoPrimitiveDot} from 'react-icons/go'
+import { GoPrimitiveDot } from "react-icons/go";
 const Ecommerce = () => {
   return (
     <div className="mt-12">
@@ -65,33 +65,43 @@ const Ecommerce = () => {
         dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-788"
         >
           <div className="flex justify-between">
-              <p className="font-semibold text-xl">Revenue Updates</p>
-              <div className="flex items-center gap-4">
-                <p className="flex items-center gap-2 
-                text-gray-600 hover:drop-shadow-xl">
-                  <span>
-                   <GoPrimitiveDot />
-                  </span>
-                  <span>Expense</span>
-                </p>
-                <p className="flex items-center gap-2 
-                text-green-400 hover:drop-shadow-xl">
-                  <span>
-                   <GoPrimitiveDot />
-                  </span>
-                  <span>Budget</span>
-                </p>
-              </div>
+            <p className="font-semibold text-xl">Revenue Updates</p>
+            <div className="flex items-center gap-4">
+              <p
+                className="flex items-center gap-2 
+                text-gray-600 hover:drop-shadow-xl"
+              >
+                <span>
+                  <GoPrimitiveDot />
+                </span>
+                <span>Expense</span>
+              </p>
+              <p
+                className="flex items-center gap-2 
+                text-green-400 hover:drop-shadow-xl"
+              >
+                <span>
+                  <GoPrimitiveDot />
+                </span>
+                <span>Budget</span>
+              </p>
+            </div>
           </div>
-          <div className="mt-10 flex gap-10 
-          flex-wrap justify-center">
-             <div className="border-r-1 border-color m-4 pr-10">
+          <div
+            className="mt-10 flex gap-10 
+          flex-wrap justify-center"
+          >
+            <div className="border-r-1 border-color m-4 pr-10">
               <div>
                 <p>
                   <span className="text-3xl font-semibold">$50,432</span>
-                  <span className="p-1.5 hover:drop-shadow-xl
+                  <span
+                    className="p-1.5 hover:drop-shadow-xl
                   cursor-pointer rounded-full text-white
-                  bg-green-400 ml-3 text-xs">33%</span>
+                  bg-green-400 ml-3 text-xs"
+                  >
+                    33%
+                  </span>
                 </p>
                 <p className="text-gray-400 mt-1">Budget</p>
               </div>
@@ -102,20 +112,26 @@ const Ecommerce = () => {
                 <p className="text-gray-400 mt-1">Expence</p>
               </div>
 
-              <div>
-                <SparkLine 
-                 currentColor="blue"
-                 id="line-sparkLine"
-                 height="80px"
-                 width="250px"
-                 data={SparklineAreaData}
-                 color="blue"
-                 type="Line"
+              <div className="mt-5">
+                <SparkLine
+                  currentColor="blue"
+                  id="line-sparkLine"
+                  height="80px"
+                  width="250px"
+                  data={SparklineAreaData}
+                  color="blue"
+                  type="Line"
                 />
               </div>
-
-
-             </div>
+              <div className="mt-10">
+                <Button
+                  color="white"
+                  bgColor="blue"
+                  text="Download Report"
+                  borderRadius="10px"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
