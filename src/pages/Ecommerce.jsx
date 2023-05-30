@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, SparkLine } from "../components";
-import { earningData } from "../data/dummy";
+import { SparklineAreaData, earningData } from "../data/dummy";
 import {GoPrimitiveDot} from 'react-icons/go'
 const Ecommerce = () => {
   return (
@@ -105,11 +105,12 @@ const Ecommerce = () => {
               <div>
                 <SparkLine 
                  currentColor="blue"
-                 id="line-sparkline"
+                 id="line-sparkLine"
                  height="80px"
                  width="250px"
                  data={SparklineAreaData}
                  color="blue"
+                 type="Line"
                 />
               </div>
 
