@@ -1,6 +1,7 @@
 import React from "react";
 import {
   ColumnDirective,
+  ColumnsDirective,
   ContextMenu,
   Edit,
   ExcelExport,
@@ -14,7 +15,7 @@ import {
 } from "@syncfusion/ej2-react-grids";
 import { ordersData, ordersGrid } from "../data/dummy";
 import { Header } from "../components";
-import { ColumnsDirective } from "@syncfusion/ej2-react-charts";
+
 
 const Orders = () => {
   return (
