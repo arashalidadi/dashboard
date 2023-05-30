@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useStateContext } from "../contexts/ContextProvider";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import { AiOutlineMenu } from "react-icons/ai";
 import { FiShoppingCart } from "react-icons/fi";
 import { BsChatLeft } from "react-icons/bs";
 import { RiNotification3Line } from "react-icons/ri";
-import avatar from '../data/avatar.jpg'
+import avatar from "../data/avatar.jpg";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import { Cart, Chat, Notification, UserProfile } from ".";
 const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
   <TooltipComponent content={title} position="BottomCenter">
     <button
@@ -20,15 +21,39 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
         style={{ background: dotColor }}
         className="absolute inline-flex
           rounded-full h-2 w-2 right-2 top-2"
-      >
-        {icon}
-      </span>
+      />
+      {icon}
     </button>
   </TooltipComponent>
 );
-const handlClick = () => {};
+
 const Navbar = () => {
-  const { activeMenu, setActiveMenu } = useStateContext();
+  const {
+    activeMenu,
+    setActiveMenu,
+    isClicked,
+    setIsClicked,
+    handlClick,
+    screenSize,
+    setScreenSize,
+  } = useStateContext();
+  useEffect(() => {
+    const handleResize = () => setScreenSize(window.innerWidth);
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (screenSize <= 900) {
+      setActiveMenu(false);
+    } else {
+      setActiveMenu(true);
+    }
+  }, [screenSize]);
+
   return (
     <div
       className="flex justify-between p-2
@@ -49,40 +74,42 @@ const Navbar = () => {
         />
         <NavButton
           title="Chat"
-          dotColor='#03C9D7'
+          dotColor="#03C9D7"
           customFunc={() => handlClick("chat")}
           color="blue"
           icon={<BsChatLeft />}
         />
-         <NavButton
+        <NavButton
           title="Notification"
-          dotColor='#03C9D7'
+          dotColor="rgb(254, 201, 15)"
           customFunc={() => handlClick("notification")}
           color="blue"
           icon={<RiNotification3Line />}
         />
-         <TooltipComponent
-         content="Profile"
-         position="BottomCenter"
-         >
-          <div className="flex items-center
+        <TooltipComponent content="Profile" position="BottomCenter">
+          <div
+            className="flex items-center
           gap-2 cursor-pointer p-1 
           hover:bg-light-gray rounded-lg"
-          onClick={() => handlClick('userProfile')}
+            onClick={() => handlClick("userProfile")}
           >
-            <img className="rounded-full w-8 h-8" 
-            src={avatar} />
-             <p>
-              <span className="text-gray-400 text-40">Hi,</span>{' '}
-              <span className="text-gray-400 font-bold
-              ml-1 text-14">Michael</span>
-             </p>
-             <MdKeyboardArrowDown 
-             className="text-gray-400 text-40"
-             />
+            <img className="rounded-full w-8 h-8" src={avatar} />
+            <p>
+              <span className="text-gray-400 text-40">Hi,</span>{" "}
+              <span
+                className="text-gray-400 font-bold
+              ml-1 text-14"
+              >
+                Michael
+              </span>
+            </p>
+            <MdKeyboardArrowDown className="text-gray-400 text-40" />
           </div>
-
-         </TooltipComponent>
+        </TooltipComponent>
+        {isClicked.cart && <Cart />}
+        {isClicked.chat && <Chat />}
+        {isClicked.notification && <Notification />}
+        {isClicked.userProfile && <UserProfile />}
       </div>
     </div>
   );
