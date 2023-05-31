@@ -3,7 +3,7 @@ import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import { FiSettings } from "react-icons/fi";
-import { Navbar, Pie, Sidebar, Stacked } from "./components";
+import { Navbar, Pie, Sidebar, Stacked, ThemeSettings } from "./components";
 import {
   Area,
   Bar,
@@ -22,7 +22,7 @@ import {
 } from "./pages";
 import { useStateContext } from "./contexts/ContextProvider";
 const App = () => {
-  const { activeMenu } = useStateContext();
+  const { activeMenu ,themeSettings ,setThemeSettings} = useStateContext();
   return (
     <div>
       <BrowserRouter>
@@ -34,6 +34,7 @@ const App = () => {
                 className="text-3xl p-3 
              hover:drop-shadow-xl hover:bg-light-gray text-white"
                 style={{ background: "blue", borderRadius: "50%" }}
+                onClick={() => setThemeSettings(true)}
               >
                 <FiSettings />
               </button>
@@ -64,6 +65,7 @@ const App = () => {
             </div>
 
             <div>
+              {themeSettings && <ThemeSettings />}
               <Routes>
                 {/* Dashboard /> */}
                 <Route path="/" element={<Ecommerce />} />
