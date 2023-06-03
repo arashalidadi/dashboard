@@ -3,7 +3,7 @@ import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import { FiSettings } from "react-icons/fi";
-import { Navbar, Pie, Sidebar, Stacked, ThemeSettings } from "./components";
+import { Navbar, Pie, Sidebar,ThemeSettings } from "./components";
 import {
   Area,
   Bar,
@@ -19,6 +19,7 @@ import {
   Line,
   Orders,
   Pyramid,
+  Stacked,
 } from "./pages";
 import { useStateContext } from "./contexts/ContextProvider";
 const App = () => {
