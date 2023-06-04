@@ -1,4 +1,4 @@
-import { FiBarChart, FiEdit, FiPieChart, FiShoppingBag } from "react-icons/fi";
+import { FiBarChart, FiCreditCard, FiEdit, FiPieChart, FiShoppingBag } from "react-icons/fi";
 import {
   AiOutlineAreaChart,
   AiOutlineBarChart,
@@ -8,7 +8,7 @@ import {
 } from "react-icons/ai";
 import { IoMdContacts } from "react-icons/io";
 import { RiContactsLine, RiStockLine } from "react-icons/ri";
-import { BsBarChart, BsBoxSeam, BsKanban } from "react-icons/bs";
+import { BsBarChart, BsBoxSeam, BsCurrencyDollar, BsKanban, BsShield } from "react-icons/bs";
 import { BiColorFill } from "react-icons/bi";
 import {} from "react-icons/fi";
 import { GiLouvrePyramid } from "react-icons/gi";
@@ -5493,5 +5493,29 @@ export const chatData = [
     message: 'Jolly completed tasks',
     desc: 'Assign her new tasks',
     time: '1:12 AM',
+  },
+];
+
+export const userProfileData = [
+  {
+    icon: <BsCurrencyDollar />,
+    title: 'My Profile',
+    desc: 'Account Settings',
+    iconColor: '#03C9D7',
+    iconBg: '#E5FAFB',
+  },
+  {
+    icon: <BsShield />,
+    title: 'My Inbox',
+    desc: 'Messages & Emails',
+    iconColor: 'rgb(0, 194, 146)',
+    iconBg: 'rgb(235, 250, 242)',
+  },
+  {
+    icon: <FiCreditCard />,
+    title: 'My Tasks',
+    desc: 'To-do and Daily Tasks',
+    iconColor: 'rgb(255, 244, 229)',
+    iconBg: 'rgb(254, 201, 15)',
   },
 ];
