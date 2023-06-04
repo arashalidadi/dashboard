@@ -5,8 +5,8 @@
 
 
 #Silte Link 
-(https://ornate-sunshine-c9605c.netlify.app)
-[React Dashboard](https://ornate-sunshine-c9605c.netlify.app)
+(https://dashboard-with-react-33.netlify.app)
+[React Dashboard](https://dashboard-with-react-33.netlify.app/)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
