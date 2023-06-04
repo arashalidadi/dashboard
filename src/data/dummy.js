@@ -1,4 +1,4 @@
-import { FiBarChart, FiCreditCard, FiEdit, FiPieChart, FiShoppingBag } from "react-icons/fi";
+import { FiBarChart, FiCreditCard, FiEdit, FiPieChart, FiShoppingBag, FiShoppingCart, FiStar } from "react-icons/fi";
 import {
   AiOutlineAreaChart,
   AiOutlineBarChart,
@@ -8,13 +8,14 @@ import {
 } from "react-icons/ai";
 import { IoMdContacts } from "react-icons/io";
 import { RiContactsLine, RiStockLine } from "react-icons/ri";
-import { BsBarChart, BsBoxSeam, BsCurrencyDollar, BsKanban, BsShield } from "react-icons/bs";
+import { BsBarChart, BsBoxSeam, BsChatLeft, BsCurrencyDollar, BsKanban, BsShield } from "react-icons/bs";
 import { BiColorFill } from "react-icons/bi";
 import {} from "react-icons/fi";
 import { GiLouvrePyramid } from "react-icons/gi";
 import { MdOutlineSupervisorAccount } from "react-icons/md";
 import { HiOutlineRefresh } from "react-icons/hi";
 import { GrLocation } from "react-icons/gr";
+import { TiTick } from "react-icons/ti"
 import product1 from "./product1.jpg";
 import product2 from "./product2.jpg";
 import product3 from "./product3.jpg";
@@ -5518,4 +5519,152 @@ export const userProfileData = [
     iconColor: 'rgb(255, 244, 229)',
     iconBg: 'rgb(254, 201, 15)',
   },
+];
+
+export const medicalproBranding = {
+  data: [
+    {
+      title: 'Due Date',
+      desc: 'Oct 23, 2021',
+    },
+    {
+      title: 'Budget',
+      desc: '$98,500',
+    },
+    {
+      title: 'Expense',
+      desc: '$63,000',
+    },
+  ],
+  teams: [
+    {
+      name: 'Bootstrap',
+      color: 'orange',
+    },
+    {
+      name: 'Angular',
+      color: '#FB9678',
+    },
+  ],
+  leaders: [
+    {
+      image:
+        avatar2,
+    },
+    {
+      image:
+        avatar3,
+    },
+    {
+      image:
+        avatar2,
+    },
+    {
+      image:
+        avatar4,
+    },
+    {
+      image:
+        avatar,
+    },
+  ],
+};
+
+export const recentTransactions = [
+  {
+    icon: <BsCurrencyDollar />,
+    amount: '+$350',
+    title: 'Paypal Transfer',
+    desc: 'Money Added',
+    iconColor: '#03C9D7',
+    iconBg: '#E5FAFB',
+    pcColor: 'green-600',
+  },
+  {
+    icon: <BsShield />,
+    amount: '-$560',
+    desc: 'Bill Payment',
+    title: 'Wallet',
+    iconColor: 'rgb(0, 194, 146)',
+    iconBg: 'rgb(235, 250, 242)',
+    pcColor: 'red-600',
+  },
+  {
+    icon: <FiCreditCard />,
+    amount: '+$350',
+    title: 'Credit Card',
+    desc: 'Money reversed',
+    iconColor: 'rgb(255, 244, 229)',
+    iconBg: 'rgb(254, 201, 15)',
+
+    pcColor: 'green-600',
+  },
+  {
+    icon: <TiTick />,
+    amount: '+$350',
+    title: 'Bank Transfer',
+    desc: 'Money Added',
+
+    iconColor: 'rgb(228, 106, 118)',
+    iconBg: 'rgb(255, 244, 229)',
+    pcColor: 'green-600',
+  },
+  {
+    icon: <BsCurrencyDollar />,
+    amount: '-$50',
+    percentage: '+38%',
+    title: 'Refund',
+    desc: 'Payment Sent',
+    iconColor: '#03C9D7',
+    iconBg: '#E5FAFB',
+    pcColor: 'red-600',
+  },
+];
+
+export const weeklyStats = [
+  {
+    icon: <FiShoppingCart />,
+    amount: '-$560',
+    title: 'Top Sales',
+    desc: 'Johnathan Doe',
+    iconBg: '#FB9678',
+    pcColor: 'red-600',
+  },
+  {
+    icon: <FiStar />,
+    amount: '-$560',
+    title: 'Best Seller',
+    desc: 'MaterialPro Admin',
+    iconBg: 'rgb(254, 201, 15)',
+    pcColor: 'red-600',
+  },
+  {
+    icon: <BsChatLeft />,
+    amount: '+$560',
+    title: 'Most Commented',
+    desc: 'Ample Admin',
+    iconBg: '#00C292',
+    pcColor: 'green-600',
+  },
+];
+
+export const dropdownData = [
+  {
+    Id: '1',
+    Time: 'March 2021',
+  },
+  {
+    Id: '2',
+    Time: 'April 2021',
+  }, {
+    Id: '3',
+    Time: 'May 2021',
+  },
+];
+
+export const ecomPieChartData = [
+  { x: '2018', y: 18, text: '35%' },
+  { x: '2019', y: 18, text: '15%' },
+  { x: '2020', y: 18, text: '25%' },
+  { x: '2021', y: 18, text: '25%' },
 ];
