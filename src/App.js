@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
@@ -24,7 +24,15 @@ import {
 } from "./pages";
 import { useStateContext } from "./contexts/ContextProvider";
 const App = () => {
-  const { activeMenu ,themeSettings ,setThemeSettings,currentColor,currentMode} = useStateContext();
+  const { setCurrentColor,setCurrentMode,activeMenu ,themeSettings ,setThemeSettings,currentColor,currentMode} = useStateContext();
+  useEffect(() => {
+    const currentThemeColor = localStorage.getItem('colorMode');
+    const currentThemeMode = localStorage.getItem('themeMode');
+    if (currentThemeColor && currentThemeMode) {
+      setCurrentColor(currentThemeColor);
+      setCurrentMode(currentThemeMode);
+    }
+  }, []);
   return (
     <div className={currentMode === 'Dark' ? 'dark' : ''}>
       <BrowserRouter>
