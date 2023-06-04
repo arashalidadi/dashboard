@@ -14,10 +14,10 @@ const ThemeSettings = () => {
     >
       <div
         className="float-right h-screen dark:text-gray-200 
-      bg-white dark:[#484852] w-400"
+      bg-white dark:bg-[#484B52] w-400"
       >
         <div className="flex justify-between items-center p-4 ml-4">
-          <p className="font-semibold text-xl">Settings</p>
+          <p className="font-semibold text-lg">Settings</p>
           <button
             type="button"
             onClick={() => setThemeSettings(false)}
@@ -28,7 +28,7 @@ const ThemeSettings = () => {
           </button>
         </div>
         <div className="flex-col border-t-1 border-color p-4 ml-4 ">
-          <p className="font-semibold text-lg">Theme Options</p>
+          <p className="font-semibold text-xl">Theme Option</p>
           <div className="mt-4">
             <input
               type="radio"
@@ -47,7 +47,7 @@ const ThemeSettings = () => {
               Light
             </label>
           </div>
-          <div className="mt-4">
+          <div className="mt-2">
             <input
               type="radio"
               id="dark"
@@ -67,10 +67,10 @@ const ThemeSettings = () => {
           </div>
         </div>
         <div className="flex-col border-t-1 border-color p-4 ml-4 ">
-          <p className="font-semibold text-lg">Theme Colors</p>
-          <div className="flex gap-2">
+          <p className="font-semibold text-xl">Theme Colors</p>
+          <div className="flex gap-3">
             {themeColors.map((item, index) => (
-              <TooltipComponent position="TopCenter" content={item.name}>
+              <TooltipComponent key={index} position="TopCenter" content={item.name}>
                 <div className="relative mt-2 flex gap-5 items-center cursor-pointer">
                   <button
                     type="button"
